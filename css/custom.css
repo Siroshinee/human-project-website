@@ -45,5 +45,28 @@
   font-weight: 100;
   font-size: 55px;
 }
+.AboutUs {
+  text-align: center;
+  font-size: 54px;
+  font-weight: 50;
+}
+
+.human-contact {
+  flex-basis: 0;
+  flex-grow: 1;
+}
 
 
+.human-features-form {
+  margin-right: 70%;
+  flex: ;
+}
+
+.Image {
+ height:500px;
+ width: 500px;
+}
+
+.human-hidden {
+  display : none;
+}
