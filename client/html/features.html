@@ -10,9 +10,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script>
       $(document).ready(function() {
-        $("#human-nav-bar").load("partials/navBar.html");
-        $(window).bind("load", function() {
+        $("#human-nav-bar").load("partials/navBar.html",function(){
           $("#nav-feature").addClass("active");
+        });
+        $(window).bind("load", function() {
+          
         });
         $("#footer").load("partials/footer.html");
       });
@@ -31,7 +33,7 @@
             <p class="lead">
               We want to hear what you want from us to be more human
             </p>
-            <form class="human-features-form">
+            <form id="featureForm" class="human-features-form">
               <div class="form-group">
                 <input
                   type="text"
@@ -46,12 +48,16 @@
                   rows="3"
                 ></textarea>
               </div>
-              <button type="submit" class="btn btn-primary">Submit</button>
+              <button 
+              type="button" 
+              class="btn btn-primary"
+              id="featureSubmitBtn"
+              >Submit</button>
             </form>
-            <div class="human-hidden">
-            <img src="78e826ca1b9351214dfdd5e47f7e2024.gif">
+            <div id="featureLoading "class="text-center human-hidden">
+            <img src="/html/assets/loader.gif">
             <p><i>loading</i></p>
-          </div>
+          </div class="text-center">
           </div>
           <div class="col">
             <div class="card human-features-suggestion">
@@ -64,7 +70,7 @@
                   <li class="list-group-item">
                     Reduce Social Media by 10% each day
                     <span class="badge badge-success"
-                      >Kripa, 2 seconds ago</span
+                      >Shiro, 2 seconds ago</span
                     >
                   </li>
                   <li class="list-group-item">
@@ -78,7 +84,8 @@
         </div>
       </div>
     </main>
-    <script src="../js/client.js"></script>
+   
     <div id="footer"></div>
+    <script src="/js/features.js"></script>
   </body>
 </html>

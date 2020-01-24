@@ -10,8 +10,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script>
       $(document).ready(function() {
-        $("#human-nav-bar").load("partials/navBar.html");
+        $("#human-nav-bar").load("partials/navBar.html", function(){
+          $("#nav-contact-us").addClass("active");
+        });
         $("#footer").load("partials/footer.html");
+        
       });
     </script>
   </head>
@@ -22,15 +25,16 @@
     </header>
     <main class="human-features-main">
       <h1 class="text-center display-4">About Us</h1>
-      <div class="container human-features-container"></div>
-      <div class="row">
-      <div class="col">
-      <h2>Got some questions?</h2>
+      
+      <div class="container">
+          <div class="row">
+            <div class="col">
+              <h2>Got some questions?</h2>
       <p class="lead">
         Drop us a line
       </p>
   
-      <form class="human-features-form">
+      
         <div class="form-group">
           <label for="exampleInputName">Name :</label>
           <input type="Name" class="form-control" id="exampleInputName">
@@ -46,11 +50,19 @@
         </div>
         <button type="button" class="btn btn-outline-primary">Submit</button>
       </form>
+            </div>
+            
+              <div class="col1">
+                <img class="Image" src="arrow.jpg">
+                <h1>We know it's hard to be human.</h1>
+                <p style="text-align: center;">Let us help!</p>
+            </div>
+          </div>
+      
 
-      <div class="col">
-      <img class="Image" src="Human.jpg">
-      <h1>We know it's hard to be human.</h1>
-      <p>Let us help!</p>
+      
+
+      
   </main>
     <div id="footer"></div>
   </body>
