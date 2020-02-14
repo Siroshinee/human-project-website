@@ -1,37 +1,38 @@
-const express = require('express')
-const cors = require("cors"); 
-const app = express();
+const express = require("express"); // import
+const cors = require("cors"); // import cors
+const app = express(); // creating an express app
 
-app.use(cors());  // to prevent CORS related issues
+app.use(cors()); // enabling cors to allow requests to come inside the server
 
-app.get('/', function (req, res) {
-    res.send('Hello World')
-})
-app.get('/dogs', function (req, res) {
-    res.send('dogs in the world')
-})
-
-app.listen(3138, function() {
-    console.log ("server has started listening on port 3138");
+app.get("/", function(req, res) {
+  res.send("Hello World");
 });
 
-app.get("/api/features", function (req, res) { 
-var features= [
-{
-    body : "Feature1",
-    author : "Shiro",
-    time : Date.now()
-},
-{
-    body : "Feature2",
-    author : "Author2",
-    time : Date.now()
-},
-{
-    body : "Feature3",
-    author : "Author3",
-    time : Date.now()
-},
-];
-res.send(features);
+app.get("/dogs", function(req, res) {
+  res.send("All the dogs in the world");
+});
+
+app.get("/features", function(req, res) {
+  var features = [
+    {
+      body: "Feature 1",
+      author: "Shiro",
+      time: Date.now()
+    },
+    {
+      body: "Feature 2",
+      author: "Student2",
+      time: Date.now()
+    },
+    {
+      body: "Feature 3",
+      author: "Student3",
+      time: Date.now()
+    }
+  ];
+  res.send(features);
+});
+
+app.listen(3000, function() {
+  console.log("Application is running on Port 3000");
 });

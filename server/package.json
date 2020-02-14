@@ -1,16 +1,14 @@
 {
-  "name": "human-project-server",
+  "name": "server",
   "version": "1.0.0",
-  "description": "This is the server of human web application",
+  "description": "Server side for Human Project",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "\"AMDT",
-    "NodeJS",
-    "Mongo",
-    "Express"
+    "NodeJs",
+    "Server-side"
   ],
   "author": "Siroshinee",
   "license": "ISC",
